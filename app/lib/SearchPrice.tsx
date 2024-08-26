@@ -37,3 +37,20 @@ export async function searchPrice( productName:String ) {
     // return data;
 
 }
+
+// const handleSearch = async ( e: any ) => {
+    //     e.preventDefault();
+        
+    //     if(!product) return;
+        
+    //     setIsPending(true);
+        
+    //     const response = await searchPrice(product);
+    //     setIsPending(false);
+    //     setSearchQuery(product);
+    //     setPlatforms(response);
+
+    //     const countResult = Object.keys(response).length;
+    //     setNumberOfResult(countResult);
+    //     console.log(response);   
+    // }
