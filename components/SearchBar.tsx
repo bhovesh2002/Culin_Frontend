@@ -1,14 +1,14 @@
 'use client'
-import { searchPrice } from "@/app/lib/SearchPrice";
 import { useState } from "react";
-import { useFormStatus } from "react-dom";
 import DisplayPrices from "./DisplayPrices";
-import { platform } from "os";
 import SearchButton from "./SearchButton";
+import NotificationBell from "./NotificationBell";
 
 type priceDetails = {
     price: string;
     productName: string;
+    url: string;
+    rating: string;
 }
 
 type Data = {
@@ -31,11 +31,11 @@ export default function SearchBar() {
 
     return(
         <div>
-            <div className='max-w-md mx-auto flex justify-center'>
+            <div className='max-w-md mx-auto flex justify-center items-center space-x-8'>
                 <form onSubmit={(e) => e.preventDefault()}>
-                    <div className="relative flex items-center w-96 h-14 rounded-lg focus-within:shadow-lg bg-slate-950 overflow-hidden">
+                    <div className="relative flex items-center w-96 h-14 rounded-lg focus-within:shadow-lg bg-slate-950 overflow-hidden border border-slate-600">
                         <input
-                        className="peer h-full w-full pl-2 outline-none focus:border-slate-700 focus:border-r-2 bg-slate-950 focus:bg-slate-900 hover:bg-slate-900 text-sm text-white-700 pr-2"
+                        className="peer h-full w-full pl-2 bg-slate-900 outline-none bg-slate-950 focus:bg-slate-900 hover:bg-slate-900 text-sm text-white-700 pr-2"
                         type="text"
                         id="search"
                         placeholder="Search something.."
@@ -49,6 +49,7 @@ export default function SearchBar() {
                         </div>
                     </div>
                 </form>
+                <NotificationBell product={product} platforms={platforms} />
             </div>
 
             
