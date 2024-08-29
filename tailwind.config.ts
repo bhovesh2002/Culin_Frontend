@@ -21,3 +21,5 @@ const config: Config = {
   plugins: [],
 };
 export default config;
+
+// CulinLogo: #F9F6ED
