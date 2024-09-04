@@ -21,7 +21,7 @@ const LoginPage = () => {
       if (response.ok) {
         const data = await response.json();
         document.cookie = `token=${data.jwt}; path=/`; 
-        router.push('/'); 
+        router.push('/main'); 
       } else {
         console.error('Login failed');
       }
