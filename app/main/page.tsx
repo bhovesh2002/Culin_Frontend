@@ -7,8 +7,15 @@ const Home = () => {
 
   return (
     <main className="flex  flex-col items-center p-24">
-      <h1>Welcome to Culin!</h1>
-      <p>A Price tracker application</p>
+      <img
+          alt="Your Company"
+          src="/CulinLogo.png"
+          className="mx-auto h-16 w-auto"
+        />
+      <p className="text-3xl">A Price tracker application</p>
+      <br />
+      <br />
+
       <SearchBar />
     </main>
   );
